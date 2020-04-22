@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
+    Route::get('index', 'AdminBlogController@index');
+    Route::get('form', 'AdminBlogController@form');
+    Route::post('form', 'AdminBlogController@create');
+    Route::get('edit', 'AdminBlogController@edit');
+    Route::post('edit', 'AdminBlogController@update');
+    Route::post('delete', 'AdminBlogController@delete');
+});
+
+Route::get('top', 'FrontBlogController@top');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
