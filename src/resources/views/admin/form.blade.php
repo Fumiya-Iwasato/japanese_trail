@@ -1,14 +1,12 @@
 @extends('layouts.admin')
-
 @section('title', 'New Article')
-
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-10 mx-auto">
+            <div class="col-md-8 mx-auto">
                 <h1>New Article</h1>
                 <hr>
-                <form action="{{ action('AdminBlogController@form') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('admin_create') }}" method="post" enctype="multipart/form-data">
                     @if (count($errors) > 0)
                         <ul>
                             @foreach($errors->all() as $e)

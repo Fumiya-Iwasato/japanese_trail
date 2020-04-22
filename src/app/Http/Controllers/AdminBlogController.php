@@ -7,9 +7,15 @@ use App\Blog;
 
 class AdminBlogController extends Controller
 {
-    public function index() {
-        $post = Blog::all()->sortByDesc('updated_at');
-        return view('admin.index');
+    public function index(Request $request) {
+
+        $cond_title = $request->cond_title;
+      if ($cond_title != '') {
+          $posts = Blog::where('title', $cond_title)->get();
+      } else {
+          $posts = Blog::all();
+      }
+      return view('admin.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
 
     public function form() {
