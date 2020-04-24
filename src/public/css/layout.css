@@ -1,0 +1,43 @@
+body {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.auther {
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.auther .img-auther {
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.auther h4 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.blog-list {
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.image {
+  width: 150px;
+  height: 150px;
+}
+
+.date {
+  font-size: 13px;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.body {
+  font-size: 15px;
+  margin-top: 0;
+}
+

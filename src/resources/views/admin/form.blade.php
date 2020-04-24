@@ -23,8 +23,11 @@
                         <textarea class="form-control" name="body" rows="20">{{ old('body') }}</textarea>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2 lbl" for="title">image</label>
-                        <input type="file" class="form-control-file" name="image">
+                        <label class="col-md-2 lbl" for="image">image</label>
+                        <div class="custom-file col-md-6">
+                            <input type="file" class="custom-file-input" id="inputFile">
+                            <label class="custom-file-label" for="inputFile" data-browse="file">Select file</label>
+                        </div>
                     </div>
                     {{ csrf_field() }}
                     <input type="submit" class="btn btn-primary" value="Update">

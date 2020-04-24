@@ -1,7 +1,11 @@
 @extends('layouts.admin')
 @section('title', 'Index')
 @section('content')
-    <div class="container">
+    <!-- フラッシュメッセージ -->
+    @if (Session::has('message'))
+        <p>{{ session('message') }}</p>
+    @endif
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <h1>Index</h1>
@@ -35,17 +39,23 @@
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th width="10%">ID</th>
+                                        <th width="5%">ID</th>
+                                        <th width="15%">Date</th>
                                         <th width="20%">Title</th>
                                         <th width="50%">Content</th>
+                                        <th width="5%"></th>
+                                        <th width="5%"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach($posts as $blog)
                                         <tr>
                                             <th>{{ $blog->id }}</th>
-                                            <td>{{ \Str::limit($blog->title, 50) }}</td>
-                                            <td>{{ \Str::limit($blog->body, 50) }}</td>
+                                            <td>{{ $blog->updated_at->format('M-d-Y') }}</td>
+                                            <td>{{ \Str::limit($blog->title, 20) }}</td>
+                                            <td>{{ \Str::limit($blog->body, 30) }}</td>
+                                            <td><a href="{{ route('admin_edit', ['id' => $blog->id]) }}">Edit</a></td>
+                                            <td><a href="{{ route('admin_delete', ['id' => $blog->id]) }}">Delete</a></td>
                                         </tr>
                                     @endforeach
                                 </tbody>

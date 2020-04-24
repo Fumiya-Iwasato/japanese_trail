@@ -16,7 +16,7 @@
         <div id="app">
             <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
                 <div class="container">
-                    <a class="navbar-brand" href="#">Japanese Trial Races</a>
+                    <a class="navbar-brand" href="#">Japanese Trail Races</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -32,13 +32,24 @@
                     </div>
                 </div>
             </nav>
-            <div class="container-fulied img-hidden">
-              <img src="image/aki.jpeg" class="img-fulied">
+            <div class="container-fluid img-hidden">
+              <img src="image/akiyoshi.jpeg" class="img-fluid">
             </div>
-            <main class="col-md-8">
-                @yield('content')
-            </main>
-            <div class="col-md-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        @yield('content')
+                    </div>
+                    <div class="col-md-3">
+                        <div class="sidebar">
+                            <div class="col-md-12 auther">
+                                <img src="image/trail.jpeg" class="img-fluid img-auther">
+                                <h4>Fumiya Iwasato</h4>
+                                <p>Japanese trail runner</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
