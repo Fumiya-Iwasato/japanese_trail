@@ -16,11 +16,11 @@
                     @endif
                     <div class="form-group row">
                         <label class="col-md-2 lbl" for="title">Title</label>
-                        <input type="text" class="form-control" name="title" value="{{ old('title') }}">
+                        <input type="text" class="form-control" name="title" value="{{ old('title', $blog_form->title) }}">
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2 lbl" for="body">Content</label>
-                        <textarea class="form-control" name="body" rows="20">{{ old('body') }}</textarea>
+                        <textarea class="form-control" name="body" rows="20">{{ old('body', $blog_form->body) }}</textarea>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="image">image</label>

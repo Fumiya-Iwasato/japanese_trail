@@ -10,7 +10,6 @@ class Blog extends Model
 
     public static $rules = [
         'title' => 'required',
-        // 文字数が多いとエラーが出る
         'body' => 'required|max:3000', 
     ];
 }

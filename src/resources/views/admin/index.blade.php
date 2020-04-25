@@ -1,10 +1,6 @@
 @extends('layouts.admin')
 @section('title', 'Index')
 @section('content')
-    <!-- フラッシュメッセージ -->
-    @if (Session::has('message'))
-        <p>{{ session('message') }}</p>
-    @endif
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 mx-auto">
@@ -53,9 +49,9 @@
                                             <th>{{ $blog->id }}</th>
                                             <td>{{ $blog->updated_at->format('M-d-Y') }}</td>
                                             <td>{{ \Str::limit($blog->title, 20) }}</td>
-                                            <td>{{ \Str::limit($blog->body, 30) }}</td>
+                                            <td>{{ \Str::limit($blog->body, 40) }}</td>
                                             <td><a href="{{ route('admin_edit', ['id' => $blog->id]) }}">Edit</a></td>
-                                            <td><a href="{{ route('admin_delete', ['id' => $blog->id]) }}">Delete</a></td>
+                                            <td><a href="{{ route('admin_delete', ['id' => $blog->id]) }}" class="btn-dell">Delete</a></td>
                                         </tr>
                                     @endforeach
                                 </tbody>
@@ -66,4 +62,16 @@
             </div>
         </div>
     </div>
+    @section('script')
+    <script>
+    $(function(){
+    $(".btn-dell").click(function(){
+    if(confirm("Are you sure to delete?")) {
+    } else {
+    return false;
+    }
+    });
+    });
+    </script>
+    @endsection
 @endsection

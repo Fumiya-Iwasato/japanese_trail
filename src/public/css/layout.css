@@ -23,20 +23,20 @@ body {
   margin-top: 20px;
 }
 
-.image {
+.blog-list .image {
   width: 150px;
   height: 150px;
 }
 
-.date {
+.blog-list .date {
   font-size: 13px;
 }
 
-.title {
+.blog-list .title {
   font-size: 30px;
 }
 
-.body {
+.blog-list .body {
   font-size: 15px;
   margin-top: 0;
 }

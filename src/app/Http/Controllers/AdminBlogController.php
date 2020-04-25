@@ -36,7 +36,7 @@ class AdminBlogController extends Controller
         $blog->fill($form);
         $blog->save();
 
-        return redirect('admin/index'); 
+        return redirect('admin/index')->with('flash_message', 'Successfully created'); 
     }
 
     public function edit(Request $request) {
@@ -62,13 +62,12 @@ class AdminBlogController extends Controller
         unset($blog_form['_token']);
         $blog->fill($blog_form)->save();
         
-        // フラッシュメッセージ
-        return redirect('admin/index')->with('flashmessage', 'Updated');
+        return redirect('admin/index')->with('flash_message', 'Successfully updated');
     }
 
     public function delete(Request $request) {
         $blog = Blog::find($request->id);
         $blog->delete();
-        return redirect('admin/index');
+        return redirect('admin/index')->with('flash_message', 'Successfully deleted');
     }
 }

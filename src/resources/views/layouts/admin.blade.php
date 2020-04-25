@@ -7,6 +7,10 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>@yield('title')</title>
         <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="{{ asset('js/main.js') }}" defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        @yield('script')
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -55,14 +59,15 @@
                 </div>
             </nav>
 
-            <main class="py-4">
-                @yield('content')
-            </main>
             @if (session('flash_message'))
-                <div class="alert alert-success">
+                <div class="flash_message alert-success text-center py-3 my-0">
                     {{ session('flash_message') }}
                 </div>
             @endif
+
+            <main class="py-4">
+                @yield('content')
+            </main>
         </div>
     </body>
 </html>
