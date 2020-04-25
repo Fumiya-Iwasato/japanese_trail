@@ -9,12 +9,14 @@ class AdminBlogController extends Controller
 {
     public function index(Request $request) {
         $cond_title = $request->cond_title;
-      if ($cond_title != '') {
-          $posts = Blog::where('title', $cond_title)->get()->sortByDesc('updated_at');
-      } else {
-          $posts = Blog::all()->sortByDesc('updated_at');
-      }
-      return view('admin.index', ['posts' => $posts, 'cond_title' => $cond_title]);
+        if ($cond_title != '') {
+            $posts = Blog::where('title', $cond_title)->get()->sortByDesc('updated_at');
+            $posts = Blog::paginate(10);
+        } else {
+            $posts = Blog::all()->sortByDesc('updated_at');
+            $posts = Blog::paginate(10);
+        }
+        return view('admin.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
 
     public function form() {

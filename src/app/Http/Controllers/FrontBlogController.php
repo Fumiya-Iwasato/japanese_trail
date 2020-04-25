@@ -13,12 +13,20 @@ class FrontBlogController extends Controller
         return view('top', ['posts' => $posts]);
     }
 
-    // それぞれのブログのページを表示したい
     public function article(Request $request) {
         $blog = Blog::find($request->id);
         if(empty($blog)) {
             abort(404);
         }
-        return view('article', ['blog_form' => $blog]);
+        return view('article', ['blog' => $blog]);
+    }
+
+    public function contact() {
+        return view('contact');
+    }
+
+    public function send(Request $request) {
+
+        return view('top')->with('flash_message', 'Your message has been successfully sent.');
     }
 }

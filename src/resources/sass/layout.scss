@@ -1,6 +1,6 @@
 body {
   background-color: rgb(240, 240, 240);
-  padding: 20px;
+  padding: 60px;
 }
 
 .auther {
@@ -20,6 +20,9 @@ body {
 .blog-list {
   background-color: #fff;
   margin-top: 20px;
+  .btn {
+    text-decoration: none;
+  }
   .image {
     width: 150px;
     height: 150px;
@@ -37,4 +40,25 @@ body {
     font-size: 15px;
     margin-top: 0;
   }
+}
+
+.blog {
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.cnt {
+  margin-bottom: 0;
+}
+
+.cnt-hr {
+  margin-top: 0;
+}
+
+.label {
+  margin-bottom: 5px;
+}
+
+.lbl {
+  margin-bottom: 0;
 }

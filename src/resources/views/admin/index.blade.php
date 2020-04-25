@@ -12,17 +12,13 @@
                     </div>
                     <div class="col-md-8">
                         <form action="{{ route('admin_index') }}" method="get">
-                            @method('GET')
-                            @csrf
                             <div class="form-group row">
-                                <div class="col-md-8">
-                                    <input type="text" class="form-control @if (!empty($errors->first('title'))) is-invalid @endif" id="title" name="title" value="{{ old('title', $title ?? '') }}" placeholder="{{ __('Title') }}">
-                                    @error('title')
-                                    <span class="invalid-feedback" role="alert"><strong>{{ $errors->first('name') }}</strong></span>
-                                    @enderror
+                                <div class="col-md-8 ml-auto">
+                                    <input type="text" class="form-control" name="cond_title" value="{{ $cond_title }}" placeholder="Title">
                                 </div>
-                                <div class="col-md-4">
-                                    <button type="submit" class="btn btn-primary"><i class="fas fa-search mr-1"></i>{{ __('Search') }}</button>
+                                <div class="col-md-2">
+                                    {{ csrf_field() }}
+                                    <input type="submit" class="btn btn-primary" value="Search">
                                 </div>
                             </div>
                         </form>
@@ -59,6 +55,11 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="pagination">
+                    {{$posts->links()}}
+                </div>
+                
             </div>
         </div>
     </div>

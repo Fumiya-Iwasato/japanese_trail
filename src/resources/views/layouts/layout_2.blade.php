@@ -32,9 +32,6 @@
                     </div>
                 </div>
             </nav>
-            <div class="container-fluid img-hidden">
-              <img src="image/akiyoshi.jpeg" class="img-fluid">
-            </div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-9">
@@ -51,6 +48,11 @@
                     </div>
                 </div>
             </div>
+            @if (session('flash_message'))
+                <div class="flash_message alert-success text-center py-3 my-0">
+                    {{ session('flash_message') }}
+                </div>
+            @endif
         </div>
     </body>
 </html>
