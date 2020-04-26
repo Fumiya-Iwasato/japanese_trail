@@ -19,50 +19,94 @@ body {
 }
 
 .blog-list {
+  color: #404040;
   background-color: #fff;
+  padding: 10px;
   margin-top: 20px;
 }
 
-.blog-list .btn {
+.blog-list .image-btn {
+  padding: 0;
   text-decoration: none;
 }
 
-.blog-list .image {
-  width: 150px;
-  height: 150px;
+.blog-list .title-btn {
+  color: #404040;
+  padding: 0;
 }
 
-.blog-list .date {
+.blog-list .blog-btn:active {
+  box-shadow: none;
+  border: none;
+}
+
+.blog-list .blog-image {
+  width: 200px;
+  height: 200px;
+}
+
+.blog-list .text {
+  margin-bottom: 20px;
+}
+
+.blog-list .blog-date {
+  margin-top: 5px;
   font-size: 13px;
 }
 
-.blog-list .title {
+.blog-list .blog-title {
+  margin-top: 5px;
   font-size: 30px;
+  text-align: center;
 }
 
-.blog-list .body {
+.blog-list .blog-text {
   font-size: 15px;
-  margin-top: 0;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  line-height: 2em;
+  text-align: center;
 }
 
-.blog {
+.blog-list .read-more-box {
+  text-align: center;
+}
+
+.blog-list .read-more {
+  font-size: 18px;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid;
+}
+
+.article {
   background-color: #fff;
   margin-top: 20px;
+  padding: 30px;
 }
 
-.cnt {
+.article .article-box {
+  margin: 0;
+}
+
+.article .article-box .article-text {
+  font-size: 16px;
+  line-height: 2em;
+}
+
+.contact-form .cnt-title {
   margin-bottom: 0;
 }
 
-.cnt-hr {
+.contact-form .cnt-hr {
   margin-top: 0;
 }
 
-.label {
+.contact-form .label {
   margin-bottom: 5px;
 }
 
-.lbl {
+.contact-form .lbl {
   margin-bottom: 0;
 }
 

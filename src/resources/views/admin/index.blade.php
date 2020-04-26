@@ -44,7 +44,7 @@
                                         <tr>
                                             <th>{{ $blog->id }}</th>
                                             <td>{{ $blog->updated_at->format('M-d-Y') }}</td>
-                                            <td>{{ \Str::limit($blog->title, 20) }}</td>
+                                            <td><a href="{{ route('article', ['id' => $blog->id]) }}">{{ \Str::limit($blog->title, 20) }}</a></td>
                                             <td>{{ \Str::limit($blog->body, 40) }}</td>
                                             <td><a href="{{ route('admin_edit', ['id' => $blog->id]) }}">Edit</a></td>
                                             <td><a href="{{ route('admin_delete', ['id' => $blog->id]) }}" class="btn-dell">Delete</a></td>

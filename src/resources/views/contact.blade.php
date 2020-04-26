@@ -3,10 +3,10 @@
 @section('content')
   <div class="container">
     <div class="row">
-      <div class="col-md-8 mx-auto">
-        <h1 class="cnt">Contact</h1>
+      <div class="col-md-8 mx-auto contact-form">
+        <h1 class="cnt-title">Contact</h1>
         <hr class=cnt-hr>
-        <form action="{{ route('top') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ route('send') }}" method="post" enctype="multipart/form-data">
             @if (count($errors) > 0)
                 <ul>
                     @foreach($errors->all() as $e)
@@ -20,15 +20,15 @@
             </div>
             <div class="form-group row label">
                 <label class="col-md-2 lbl" for="title">e-mail</label>
-                <input type="text" class="form-control" name="e-mail" value="{{ old('email') }}">
+                <input type="text" class="form-control" name="email" value="{{ old('email') }}">
             </div>
             <div class="form-group row label">
                 <label class="col-md-2 lbl" for="title">Title</label>
                 <input type="text" class="form-control" name="title" value="{{ old('title') }}">
             </div>
             <div class="form-group row label">
-                <label class="col-md-2 lbl" for="body">Message</label>
-                <textarea class="form-control" name="body" rows="15">{{ old('body') }}</textarea>
+                <label class="col-md-2 lbl" for="message">Message</label>
+                <textarea class="form-control" name="message" rows="15">{{ old('message') }}</textarea>
             </div>
             {{ csrf_field() }}
             <input type="submit" class="btn btn-primary" value="Send">
