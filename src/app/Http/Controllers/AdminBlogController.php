@@ -10,11 +10,10 @@ class AdminBlogController extends Controller
     public function index(Request $request) {
         $cond_title = $request->cond_title;
         if ($cond_title != '') {
-            $posts = Blog::where('title', $cond_title)->get()->sortByDesc('updated_at');
-            $posts = Blog::paginate(10);
+            $posts = Blog::where('title', $cond_title)->orderBy('created_at', 'desc')->paginate(10);
+            $posts = Blog::where('title', 'like', '%'.$cond_title.'%')->orderBy('created_at', 'desc')->paginate(10);
         } else {
-            $posts = Blog::all()->sortByDesc('updated_at');
-            $posts = Blog::paginate(10);
+            $posts = Blog::orderBy('created_at', 'desc')->paginate(10);
         }
         return view('admin.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }

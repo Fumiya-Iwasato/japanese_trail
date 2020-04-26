@@ -14,7 +14,7 @@
                         <form action="{{ route('admin_index') }}" method="get">
                             <div class="form-group row">
                                 <div class="col-md-8 ml-auto">
-                                    <input type="text" class="form-control" name="cond_title" value="{{ $cond_title }}" placeholder="Title">
+                                    <input type="text" class="form-control" name="cond_title" value="{{ $cond_title }}">
                                 </div>
                                 <div class="col-md-2">
                                     {{ csrf_field() }}

@@ -9,7 +9,7 @@
       <p class="text-right article-date">{{ $blog->updated_at->format('M-d-Y') }}</p>
       <div class="image article-image">
             @if ($blog->image_path)
-                <img src="{{ asset('storage/image/' . $post->image_path) }}" class="image">
+                <img src="{{ asset('storage/image/' . $blog->image_path) }}" class="image">
             @endif
           </div>
       <p class="article-text">{{ $blog->body }}</p>
