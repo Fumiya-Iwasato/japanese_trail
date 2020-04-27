@@ -37,23 +37,23 @@
             </div>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-md-8">
                         @yield('content')
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="sidebar">
-                                    
-                                    <div class="col-md-12 auther">
-                                        <img src="image/trail.jpeg" class="img-fluid img-auther">
-                                        <h4>Fumiya Iwasato</h4>
-                                        <p>Japanese trail runner</p>
-                                    </div>
-
-                                    <form action="{{ route('top') }}" method="get" class="col-md-12 search-box">
-                                                <input type="text" class="search-form" name="cond_title" value="{{ $cond_title }}">
-                                                {{ csrf_field() }}
-                                                <input type="submit" class="btn btn-primary btn-search" value="Search">
-                                    </form>
+                            <div class="col-md-12 auther">
+                                <img src="image/trail.jpeg" class="img-fluid img-auther">
+                                <h4>Fumiya Iwasato</h4>
+                                <p>Japanese trail runner</p>
+                            </div>
+                            <form action="{{ route('top') }}" method="get" class="col-md-12 search-box">
+                                <div class="form-group row">
+                                    <input type="text" class="form-control search-form" name="cond_title" value="{{ $cond_title }}">
+                                    {{ csrf_field() }}
+                                    <input type="submit" class="btn btn-primary btn-search" value="Search">
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

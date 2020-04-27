@@ -6,11 +6,16 @@ body {
 .auther {
   background-color: #fff;
   margin-top: 20px;
+  padding-top: 20px;
 }
 
 .auther .img-auther {
+  width: 60%;
+  height: 60%;
   border-radius: 50%;
-  margin-top: 20px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .auther h4 {
@@ -24,63 +29,48 @@ body {
   padding: 10px;
 }
 
-.search-box .search-form {
-  font-size: 18px;
-  width: 100%;
-  display: block;
+.search-box .form-group {
+  margin: auto;
 }
 
-.search-box .btn-search {
-  padding: 5px;
-  margin-top: 5px;
-  display: block;
+.search-box .form-group .search-form {
+  width: 80%;
+}
+
+.search-box .form-group .btn-search {
+  width: 20%;
 }
 
 .blog-list {
   color: #404040;
   background-color: #fff;
-  padding: 10px;
+  padding: 30px 10px;
   margin-top: 20px;
 }
 
-.blog-list .image-btn {
-  padding: 0;
-  text-decoration: none;
-}
-
-.blog-list .title-btn {
-  color: #404040;
-  padding: 0;
-}
-
-.blog-list .blog-btn:active {
-  box-shadow: none;
-  border: none;
-}
-
-.blog-list .blog-image {
-  width: 200px;
-  height: 200px;
-}
-
-.blog-list .text {
-  margin-bottom: 20px;
-}
-
 .blog-list .blog-date {
-  margin-top: 5px;
-  font-size: 13px;
+  font-size: 15px;
+  margin-bottom: 10px;
 }
 
 .blog-list .blog-title {
-  margin-top: 5px;
   font-size: 30px;
-  text-align: center;
+  color: #404040;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.blog-list .blog-image {
+  text-decoration: none;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
 }
 
 .blog-list .blog-text {
   font-size: 15px;
-  margin-top: 5px;
+  padding: 0 50px;
+  margin-top: 20px;
   margin-bottom: 15px;
   line-height: 2em;
   text-align: center;
@@ -93,7 +83,6 @@ body {
 .blog-list .read-more {
   font-size: 18px;
   padding: 5px;
-  margin-bottom: 10px;
   border: 1px solid;
   opacity: 0.8;
 }
@@ -111,6 +100,24 @@ body {
 
 .article .article-box {
   margin: 0;
+}
+
+.article .article-box .article-date {
+  text-align: center;
+}
+
+.article .article-box .article-title {
+  text-align: center;
+}
+
+.article .article-box .article-image {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.article .article-box .article-image img {
+  max-width: 100%;
 }
 
 .article .article-box .article-text {

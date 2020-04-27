@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Blog;
 use App\Contact;
 use App\Mail\ContactSendmail;
+use Illuminate\Support\Facades\Mail;
 
 
 class FrontBlogController extends Controller
@@ -37,6 +38,9 @@ class FrontBlogController extends Controller
 
     public function send(Request $request) {
         $this->validate($request, Contact::$rules);
+        $inputs = $request->all();
+        Mail::to($inputs['email'])->send(new ContactSendmail($inputs));
+
         return redirect('top')->with('flash_message', 'Your message has been successfully sent.');
     }
 }

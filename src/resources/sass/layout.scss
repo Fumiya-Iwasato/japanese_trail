@@ -6,10 +6,15 @@ body {
 .auther {
   background-color: #fff;
   margin-top: 20px;
+  padding-top: 20px;
 
   .img-auther {
+    width: 60%;
+    height: 60%;
     border-radius: 50%;
-    margin-top: 20px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
   }
   h4 {
     text-align: center;
@@ -21,56 +26,43 @@ body {
   margin-top: 20px;
   padding: 10px;
 
-  .search-form {
-    font-size: 18px;
-    width:100%;
-    display: block;
-  }
-
-  .btn-search{
-    padding: 5px;
-    margin-top: 5px;
-    display: block;
+  .form-group {
+    margin: auto;
+    .search-form {
+      width: 80%;
+    }
+    .btn-search{
+      width: 20%;
+    }
   }
 }
 
 .blog-list {
   color: rgb(64, 64, 64);
   background-color: #fff;
-  padding: 10px;
+  padding: 30px 10px;
   margin-top: 20px;
 
-  .image-btn {
-    padding: 0;
-    text-decoration: none;
-  }
-  .title-btn {
-    color: rgb(64, 64, 64);
-    padding: 0;
-  }
-  .blog-btn:active {
-    box-shadow: none;
-    border: none;
-  }
-  .blog-image {
-    width: 200px;
-    height: 200px;
-  }
-  .text {
-    margin-bottom: 20px;
-  }
   .blog-date {
-    margin-top: 5px;
-    font-size: 13px;
+    font-size: 15px;
+    margin-bottom: 10px;
   }
   .blog-title {
-    margin-top: 5px;
     font-size: 30px;
-    text-align: center;
+    color: rgb(64, 64, 64);
+    display: block;
+    margin-bottom: 10px;
+  }
+  .blog-image {
+    text-decoration: none;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
   }
   .blog-text {
     font-size: 15px;
-    margin-top: 5px;
+    padding: 0 50px;
+    margin-top: 20px;
     margin-bottom: 15px;
     line-height: 2em;
     text-align: center;
@@ -81,11 +73,11 @@ body {
   .read-more {
     font-size: 18px;
     padding: 5px;
-    margin-bottom: 10px;
     border: 1px solid;
     opacity: 0.8;
   }
 }
+
 .top-pagination {
   margin-top: 20px;
   justify-content: center;
@@ -99,6 +91,21 @@ body {
   .article-box{
     margin:0;
 
+    .article-date {
+      text-align: center;
+    }
+    .article-title {
+      text-align: center;
+    }
+    .article-image {
+      width:80%;
+      margin-right: auto;
+      margin-left: auto;
+      
+      img {
+        max-width: 100%;
+      }
+    }
     .article-text {
       font-size: 16px;
       line-height: 2em;

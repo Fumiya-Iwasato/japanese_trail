@@ -14,7 +14,7 @@ class ContactSendmail extends Mailable
     private $name;
     private $email;
     private $title;
-    private $message;
+    private $body;
 
     /**
      * Create a new message instance.
@@ -26,7 +26,7 @@ class ContactSendmail extends Mailable
         $this->name = $inputs['name'];
         $this->email = $inputs['email'];
         $this->title = $inputs['title'];
-        $this->message  = $inputs['message'];
+        $this->body  = $inputs['body'];
     }
 
     /**
@@ -37,14 +37,14 @@ class ContactSendmail extends Mailable
     public function build()
     {
         return $this
-            ->from('fmy.nmh@gmail.com')
+            ->from('fitrail.238@gmail.com')
             ->subject('自動送信メール')
             ->view('mail')
             ->with([
                 'name' => $this->name,
                 'email' => $this->email,
                 'title' => $this->title,
-                'message'  => $this->message,
+                'body'  => $this->body,
             ]);
     }
 }

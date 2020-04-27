@@ -27,8 +27,8 @@
                 <input type="text" class="form-control" name="title" value="{{ old('title') }}">
             </div>
             <div class="form-group row label">
-                <label class="col-md-2 lbl" for="message">Message</label>
-                <textarea class="form-control" name="message" rows="15">{{ old('message') }}</textarea>
+                <label class="col-md-2 lbl" for="body">body</label>
+                <textarea class="form-control" name="body" rows="15">{{ old('body') }}</textarea>
             </div>
             {{ csrf_field() }}
             <input type="submit" class="btn btn-primary" value="Send">

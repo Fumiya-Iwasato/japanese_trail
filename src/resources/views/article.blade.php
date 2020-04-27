@@ -5,13 +5,13 @@
 @section('content')
   <div class="container article">
     <div class="row article-box">
-      <h2 class="text-center">{{ $blog->title }}</h2>
-      <p class="text-right article-date">{{ $blog->updated_at->format('M-d-Y') }}</p>
-      <div class="image article-image">
-            @if ($blog->image_path)
-                <img src="{{ asset('storage/image/' . $blog->image_path) }}" class="image">
-            @endif
-          </div>
+      <p class="article-date">{{ $blog->updated_at->format('M-d-Y') }}</p>
+      <h1 class="article-title">{{ $blog->title }}</h1>
+      <div class="article-image">
+        @if ($blog->image_path)
+            <img src="{{ asset('storage/image/' . $blog->image_path) }}">
+        @endif
+      </div>
       <p class="article-text">{{ $blog->body }}</p>
     </div>
   </div>

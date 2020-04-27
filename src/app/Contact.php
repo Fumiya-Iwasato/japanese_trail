@@ -12,6 +12,6 @@ class Contact extends Model
         'name' => 'required',
         'email' => 'required',
         'title' => 'required',
-        'message' => 'required|max:1000',
+        'body' => 'required|max:1000',
     ];
 }
