@@ -50,7 +50,7 @@
                                     </div>
 
                                     <form action="{{ route('top') }}" method="get" class="col-md-12 search-box">
-                                                <input type="text" class="search-form" name="cond_title" value="{{ $cond_title }}" placeholder="Title">
+                                                <input type="text" class="search-form" name="cond_title" value="{{ $cond_title }}">
                                                 {{ csrf_field() }}
                                                 <input type="submit" class="btn btn-primary btn-search" value="Search">
                                     </form>
