@@ -16,6 +16,23 @@ body {
     margin-top: 10px;
   }
 }
+.search-box {
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 10px;
+
+  .search-form {
+    font-size: 18px;
+    width:100%;
+    display: block;
+  }
+
+  .btn-search{
+    padding: 5px;
+    margin-top: 5px;
+    display: block;
+  }
+}
 
 .blog-list {
   color: rgb(64, 64, 64);
@@ -66,7 +83,12 @@ body {
     padding: 5px;
     margin-bottom: 10px;
     border: 1px solid;
+    opacity: 0.8;
   }
+}
+.top-pagination {
+  margin-top: 20px;
+  justify-content: center;
 }
 
 .article {

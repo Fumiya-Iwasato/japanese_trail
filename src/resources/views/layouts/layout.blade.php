@@ -35,18 +35,25 @@
             <div class="container-fluid img-hidden">
               <img src="image/akiyoshi.jpeg" class="img-fluid">
             </div>
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-9">
                         @yield('content')
                     </div>
                     <div class="col-md-3">
                         <div class="sidebar">
-                            <div class="col-md-12 auther">
-                                <img src="image/trail.jpeg" class="img-fluid img-auther">
-                                <h4>Fumiya Iwasato</h4>
-                                <p>Japanese trail runner</p>
-                            </div>
+                                    
+                                    <div class="col-md-12 auther">
+                                        <img src="image/trail.jpeg" class="img-fluid img-auther">
+                                        <h4>Fumiya Iwasato</h4>
+                                        <p>Japanese trail runner</p>
+                                    </div>
+
+                                    <form action="{{ route('top') }}" method="get" class="col-md-12 search-box">
+                                                <input type="text" class="search-form" name="cond_title" value="{{ $cond_title }}" placeholder="Title">
+                                                {{ csrf_field() }}
+                                                <input type="submit" class="btn btn-primary btn-search" value="Search">
+                                    </form>
                         </div>
                     </div>
                 </div>

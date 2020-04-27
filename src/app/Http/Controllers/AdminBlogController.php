@@ -27,10 +27,10 @@ class AdminBlogController extends Controller
         $blog = new Blog;
         $form = $request->all();
         if (isset($form['image'])) {
-        $path = $request->file('image')->store('public/image');
-        $blog->image_path = basename($path);
+            $path = $request->file('image')->store('public/image');
+            $blog->image_path = basename($path);
         } else {
-          $blog->image_path = null;
+            $blog->image_path = null;
         }
         unset($form['_token']);
         unset($form['image']);

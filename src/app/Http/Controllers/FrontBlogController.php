@@ -13,8 +13,14 @@ use App\Mail\ContactSendmail;
 class FrontBlogController extends Controller
 {
     public function top(Request $request) {
-        $posts = Blog::all()->sortByDesc('updated_at');
-        return view('top', ['posts' => $posts]);
+        $cond_title = $request->cond_title;
+        if ($cond_title != '') {
+            $posts = Blog::where('title', $cond_title)->orderBy('created_at', 'desc')->paginate(5);
+            $posts = Blog::where('title', 'like', '%'.$cond_title.'%')->orderBy('created_at', 'desc')->paginate(5);
+        } else {
+            $posts = Blog::orderBy('created_at', 'desc')->paginate(5);
+        }
+        return view('top', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
 
     public function article(Request $request) {
