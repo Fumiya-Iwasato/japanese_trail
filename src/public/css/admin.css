@@ -6,3 +6,15 @@ body {
   font-size: 18px;
 }
 
+.custom-file {
+  overflow: hidden;
+}
+
+.custom-file-label {
+  white-space: nowrap;
+}
+
+.update-btn {
+  margin-top: 20px;
+}
+

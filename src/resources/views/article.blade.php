@@ -4,15 +4,16 @@
 @endsection
 @section('content')
   <div class="container article">
-    <div class="row article-box">
-      <p class="article-date">{{ $blog->updated_at->format('M-d-Y') }}</p>
-      <h1 class="article-title">{{ $blog->title }}</h1>
-      <div class="article-image">
-        @if ($blog->image_path)
-            <img src="{{ asset('storage/image/' . $blog->image_path) }}">
-        @endif
+      <div class="row">
+        <div class="text-center">
+          <p class="article-date">{{ $blog->updated_at->format('M-d-Y') }}</p>
+          <h1 class="article-title">{{ $blog->title }}</h1>
+          <img src="{{ asset('storage/image/' . $blog->image_path) }}" class="article-image">
+          <p class="article-text">{!! nl2br(e($blog->body)) !!}</P>
+          <div class="back-box">
+            <a href="{{ route('top') }}" class="back">Back</a>
+          </div>
+        </div>
       </div>
-      <p class="article-text">{{ $blog->body }}</p>
     </div>
-  </div>
 @endsection

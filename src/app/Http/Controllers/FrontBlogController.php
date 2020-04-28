@@ -32,6 +32,11 @@ class FrontBlogController extends Controller
         return view('article', ['blog' => $blog]);
     }
 
+    // public function search(Request $request) {
+    //     $cond_title = $request->cond_title;
+    //     return view('top',  ['cond_title' => $cond_title]);
+    // }
+
     public function contact() {
         return view('contact');
     }

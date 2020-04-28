@@ -22,24 +22,17 @@
                         <label class="col-md-2 lbl" for="body">Content</label>
                         <textarea class="form-control" name="body" rows="20">{{ old('body', $blog_form->body) }}</textarea>
                     </div>
-                    <div class="form-group row">
-                        <label class="col-md-2" for="image">image</label>
-                        <div class="col-md-10">
-                            <div class="custom-file col-md-6">
-                                <input type="file" class="custom-file-input" id="inputFile">
-                                <label class="custom-file-label" for="inputFile" data-browse="file">Change file</label>
-                            </div>
-                            <div class="form-text text-info">
-                                {{ $blog_form->image_path }}
-                            </div>
-                            <div class="form-check">
-                                <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" name="remove" value="true">Delete file
-                                </label>
-                            </div>
+                    <div class="input-group">
+                        <label class="col-md-2 lbl" for="title">Image</label>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile" name="image">
+                            <label class="custom-file-label" for="customFile" data-browse="Browse">{{ $blog_form->image_path }}</label>
+                        </div>
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-outline-secondary reset">Cancel</button>
                         </div>
                     </div>
-                    <div class="form-group row">
+                    <div class="form-group row update-btn">
                         <div class="col-md-10">
                             <input type="hidden" name="id" value="{{ $blog_form->id }}">
                             {{ csrf_field() }}

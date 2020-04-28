@@ -29,22 +29,59 @@ body {
   padding: 10px;
 }
 
-.search-box .form-group {
-  margin: auto;
+.search-box .search-box-2 {
+  margin: 20px auto;
 }
 
-.search-box .form-group .search-form {
-  width: 80%;
+.search-box .search-box-2 dl.search1 {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 6px;
 }
 
-.search-box .form-group .btn-search {
-  width: 20%;
+.search-box .search-box-2 dl.search1 dt {
+  padding: 3px;
+}
+
+.search-box .search-box-2 dl.search1 dt input {
+  width: 70%;
+  height: 30px;
+  line-height: 30px;
+  background: none;
+  border: none;
+}
+
+.search-box .search-box-2 dl.search1 dd {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+}
+
+.search-box .search-box-2 dl.search1 dd button {
+  display: block;
+  background: #2b71c8;
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  border: none;
+  border-radius: 0 6px 6px 0;
+}
+
+.search-box .search-box-2 dl.search1 dd button:hover {
+  background: #4e91e4;
+}
+
+.search-box .search-box-2 dl.search1 dd button span {
+  display: block;
+  color: #FFF;
 }
 
 .blog-list {
   color: #404040;
   background-color: #fff;
-  padding: 30px 10px;
+  padding: 30px 20px;
   margin-top: 20px;
 }
 
@@ -56,22 +93,20 @@ body {
 .blog-list .blog-title {
   font-size: 30px;
   color: #404040;
-  display: block;
-  margin-bottom: 10px;
 }
 
 .blog-list .blog-image {
   text-decoration: none;
   width: 80%;
   display: block;
-  margin: 0 auto;
+  margin: 5px auto 0 auto;
 }
 
 .blog-list .blog-text {
-  font-size: 15px;
+  font-size: 16px;
   padding: 0 50px;
   margin-top: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   line-height: 2em;
   text-align: center;
 }
@@ -82,7 +117,7 @@ body {
 
 .blog-list .read-more {
   font-size: 18px;
-  padding: 5px;
+  padding: 8px;
   border: 1px solid;
   opacity: 0.8;
 }
@@ -93,36 +128,47 @@ body {
 }
 
 .article {
+  color: #404040;
   background-color: #fff;
+  padding: 30px 20px;
   margin-top: 20px;
-  padding: 30px;
 }
 
-.article .article-box {
-  margin: 0;
+.article .row {
+  justify-content: center;
 }
 
-.article .article-box .article-date {
-  text-align: center;
+.article .row .article-date {
+  font-size: 15px;
+  margin-bottom: 10px;
 }
 
-.article .article-box .article-title {
-  text-align: center;
+.article .row .article-title {
+  font-size: 30px;
+  color: #404040;
 }
 
-.article .article-box .article-image {
+.article .row .article-image {
+  text-decoration: none;
   width: 80%;
-  margin-right: auto;
-  margin-left: auto;
+  display: block;
+  margin: 5px auto 0 auto;
 }
 
-.article .article-box .article-image img {
-  max-width: 100%;
-}
-
-.article .article-box .article-text {
+.article .row .article-text {
   font-size: 16px;
+  padding: 0 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   line-height: 2em;
+  text-align: left;
+}
+
+.article .row .back-box .back {
+  font-size: 18px;
+  padding: 10px;
+  border: 1px solid;
+  opacity: 0.8;
 }
 
 .contact-form .cnt-title {

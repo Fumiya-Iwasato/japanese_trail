@@ -22,14 +22,18 @@
                         <label class="col-md-2 lbl" for="body">Content</label>
                         <textarea class="form-control" name="body" rows="20">{{ old('body') }}</textarea>
                     </div>
-                    <div class="form-group row">
+                    <div class="input-group">
                         <label class="col-md-2 lbl" for="title">Image</label>
-                        <div class="col-md-10">
-                            <input type="file" class="form-control-file" name="image">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile" name="image">
+                            <label class="custom-file-label" for="customFile" data-browse="Browse">Choose file</label>
+                        </div>
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-outline-secondary reset">Cancel</button>
                         </div>
                     </div>
                     {{ csrf_field() }}
-                    <input type="submit" class="btn btn-primary" value="Update">
+                    <input type="submit" class="btn btn-primary update-btn" value="Update">
                 </form>
             </div>
         </div>
