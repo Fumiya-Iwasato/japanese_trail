@@ -45,7 +45,7 @@
                             <div class="col-md-12 auther">
                                 <img src="image/trail.jpeg" class="img-fluid img-auther">
                                 <h4>Fumiya Iwasato</h4>
-                                <p>Japanese trail runner</p>
+                                <p>Trail runner from Nagasaki,Japan</p>
                             </div>
                             <div class="col-md-12 search-box">
                                 <form action="{{ route('top') }}" method="get" class="search-box-2">
