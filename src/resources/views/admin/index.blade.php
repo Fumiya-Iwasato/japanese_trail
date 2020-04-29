@@ -7,20 +7,16 @@
                 <h1>Index</h1>
                 <hr>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4 create-btn">
                         <a href="{{ route('admin_form') }}" role="button" class="btn btn-primary">Create</a>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-6 ml-auto search-btn">
                         <form action="{{ route('admin_index') }}" method="get">
-                            <div class="form-group row">
-                                <div class="col-md-8 ml-auto">
-                                    <input type="text" class="form-control" name="cond_title" value="{{ $cond_title }}">
-                                </div>
-                                <div class="col-md-2">
+                                <dl class="search1">
+                                    <dt><input type="text" name="cond_title" value="{{ $cond_title }}"></dt>
                                     {{ csrf_field() }}
-                                    <input type="submit" class="btn btn-primary" value="Search">
-                                </div>
-                            </div>
+                                    <dd><button type="submit"><span>Search</span></button></dd>
+                                </dl>
                         </form>
                     </div>
                 </div>

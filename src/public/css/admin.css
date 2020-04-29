@@ -2,6 +2,16 @@ body {
   padding-top: 60px;
 }
 
+.logout-btn {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+.logout-btn:hover {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
 .lbl {
   font-size: 18px;
 }
@@ -16,5 +26,56 @@ body {
 
 .update-btn {
   margin-top: 20px;
+}
+
+dl.search1 {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+dl.search1 dt {
+  padding: 3px;
+}
+
+dl.search1 dt input {
+  width: 75%;
+  height: 30px;
+  line-height: 30px;
+  background: none;
+  border: none;
+}
+
+dl.search1 dd {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+}
+
+dl.search1 dd button {
+  display: block;
+  background: #3490dc;
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  border: none;
+  border-radius: 0 6px 6px 0;
+}
+
+dl.search1 dd button:hover {
+  background: #3490dc;
+}
+
+dl.search1 dd button span {
+  display: block;
+  color: #FFF;
+}
+
+@media (max-width: 767px) {
+  .search-btn {
+    margin-top: 20px;
+  }
 }
 

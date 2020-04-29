@@ -10,6 +10,9 @@
         <script src="{{ asset('js/main.js') }}" defer></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
         @yield('script')
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
@@ -30,24 +33,23 @@
                                 <a class="nav-link" href="{{ route('top') }}">HOME</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin_index') }}">INDEX</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('contact') }}">CONTACT</a>
                             </li>
                         </ul>
                         <ul class="navbar-nav ml-auto">
                             @guest
-                                <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                             @else
-                                <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }} <span class="caret"></span>
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                <li class="nav-item">
+                                    <div class="nav-link" aria-labelledby="navbarDropdown">
+                                        <a class="nav-item logout-btn" href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                             document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
+                                            {{ __('LOGOUT') }}
                                         </a>
-                                        <a class="dropdown-item" href="{{ route('admin_index') }}">INDEX</a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             @csrf

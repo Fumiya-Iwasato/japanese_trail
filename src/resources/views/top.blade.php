@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-@section('title', 'Top')
+@section('title', 'Japanese Trail Races')
 @section('content')
   @foreach($posts as $post)
     <div class="container blog-list">
