@@ -32,6 +32,27 @@
                                 <a class="nav-link" href="{{ route('contact') }}">CONTACT</a>
                             </li>
                         </ul>
+                        @guest
+                        @else
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin_index') }}">INDEX</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin_create') }}">CREATE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                    {{ __('LOGOUT') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </li>
+                        </ul>
+                        @endguest
                     </div>
                 </div>
             </nav>
@@ -45,17 +66,21 @@
                             <div class="col-md-12 auther">
                                 <img src="image/trail.jpeg" class="img-fluid img-auther">
                                 <h4>Fumiya Iwasato</h4>
-                                <p>Japanese trail runner</p>
+                                <p>Trail runner from Nagasaki, Japan</p>
+                            </div>
+                            <div class="col-md-12 search-box">
+                                <form action="{{ route('top') }}" method="get" class="search-box-2">
+                                    <dl class="search1">
+                                        <dt><input type="text" name="cond_title"></dt>
+                                        {{ csrf_field() }}
+                                        <dd><button type="submit"><span>Search</span></button></dd>
+                                    </dl>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            @if (session('flash_message'))
-                <div class="flash_message alert-success text-center py-3 my-0">
-                    {{ session('flash_message') }}
-                </div>
-            @endif
         </div>
     </body>
 </html>

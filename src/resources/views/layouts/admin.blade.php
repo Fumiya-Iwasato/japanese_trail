@@ -40,23 +40,22 @@
                             </li>
                         </ul>
                         <ul class="navbar-nav ml-auto">
-                            @guest
-                                <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                            @else
-                                <li class="nav-item">
-                                    <div class="nav-link" aria-labelledby="navbarDropdown">
-                                        <a class="nav-item logout-btn" href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                            document.getElementById('logout-form').submit();">
-                                            {{ __('LOGOUT') }}
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            @csrf
-                                        </form>
-                                    </div>
-                                </li>
-                            @endguest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin_index') }}">INDEX</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin_create') }}">CREATE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                    {{ __('LOGOUT') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </li>
                         </ul>
                     </div>
                 </div>

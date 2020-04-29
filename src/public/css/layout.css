@@ -5,7 +5,7 @@ body {
 
 .auther {
   background-color: #fff;
-  margin-top: 20px;
+  margin-top: 30px;
   padding: 15px;
 }
 
@@ -29,7 +29,7 @@ body {
 
 .search-box {
   background-color: #fff;
-  margin-top: 20px;
+  margin-top: 30px;
   padding: 10px;
 }
 
@@ -86,7 +86,7 @@ body {
   color: #404040;
   background-color: #fff;
   padding: 30px 20px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .blog-list .blog-date {
@@ -135,7 +135,7 @@ body {
   color: #404040;
   background-color: #fff;
   padding: 30px 20px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .article .row {
@@ -156,7 +156,7 @@ body {
   text-decoration: none;
   width: 80%;
   display: block;
-  margin: 5px auto 0 auto;
+  margin: 15px auto 0 auto;
 }
 
 .article .row .article-text {

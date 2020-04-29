@@ -26,9 +26,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 
 Route::get('top', 'FrontBlogController@top')->name('top');
 Route::get('article', 'FrontBlogController@article')->name('article');
-// Route::get('article', 'FrontBlogController@search')->name('search');
-// Route::get('contact', 'FrontBlogController@search')->name('search');
-
 Route::get('contact', 'FrontBlogController@contact')->name('contact');
 Route::post('contact', 'FrontBlogController@send')->name('send');
 
