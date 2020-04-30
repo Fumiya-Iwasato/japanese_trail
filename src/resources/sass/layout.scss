@@ -4,6 +4,7 @@ body {
 }
 
 .auther {
+  color: rgb(64, 64, 64);
   background-color: #fff;
   margin-top: 30px;
   padding: 15px;
@@ -42,6 +43,7 @@ body {
       padding: 3px;
     }
     dl.search1 dt input{
+      color: rgb(64, 64, 64);
       width: 70%;
       height: 30px;
       line-height: 30px;
@@ -159,6 +161,8 @@ body {
 }
 
 .contact-form {
+  color: rgb(64, 64, 64);
+
   .cnt-title {
     margin-bottom: 0;
   }
@@ -170,5 +174,8 @@ body {
   }
   .lbl {
     margin-bottom: 0;
+  }
+  .send-btn {
+    margin-top: 10px;
   }
 }

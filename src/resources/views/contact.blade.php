@@ -31,7 +31,7 @@
                 <textarea class="form-control" name="body" rows="15">{{ old('body') }}</textarea>
             </div>
             {{ csrf_field() }}
-            <input type="submit" class="btn btn-primary" value="Send">
+            <input type="submit" class="btn btn-primary send-btn" value="Send">
         </form>
       </div>
     </div>

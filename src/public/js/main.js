@@ -118,7 +118,7 @@ $('.reset').click(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/fumiya/laravel/trail_blog/src/resources/js/main.js */"./resources/js/main.js");
+module.exports = __webpack_require__(/*! /Users/fumiya/techboost/trail_blog/src/resources/js/main.js */"./resources/js/main.js");
 
 
 /***/ })

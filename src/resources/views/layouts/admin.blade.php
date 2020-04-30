@@ -46,6 +46,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('admin_create') }}">CREATE</a>
                             </li>
+                            @guest
+                            <li><a class="nav-link" href="{{ route('login') }}">{{ __('LOGIN') }}</a></li>
+                            @else
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
@@ -56,6 +59,7 @@
                                     @csrf
                                 </form>
                             </li>
+                            @endguest
                         </ul>
                     </div>
                 </div>
