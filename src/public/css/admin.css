@@ -2,8 +2,19 @@ body {
   padding-top: 60px;
 }
 
+.flash_message {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1030;
+}
+
 .lbl {
   font-size: 18px;
+}
+
+.img-lbl {
+  margin-right: 10px;
 }
 
 .custom-file {
@@ -64,6 +75,11 @@ dl.search1 dd button span {
 }
 
 @media (max-width: 767px) {
+  .form-control {
+    width: 97%;
+    margin: auto;
+  }
+
   .search-btn {
     margin-top: 20px;
   }

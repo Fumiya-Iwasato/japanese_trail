@@ -33,9 +33,6 @@
                                 <a class="nav-link" href="{{ route('top') }}">HOME</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('admin_index') }}">INDEX</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('contact') }}">CONTACT</a>
                             </li>
                         </ul>

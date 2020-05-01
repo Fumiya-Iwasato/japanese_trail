@@ -12,7 +12,7 @@
               <img src="{{ asset('storage/image/' . $post->image_path) }}" class="blog-image">
             @endif
           </a>
-          <p class="blog-text">{{ str_limit($post->body, 300) }}</P>
+          <p class="blog-text">{{ str_limit($post->desc, 200) }}</P>
           <div class="read-more-box">
             <a href="{{ route('article', ['id' => $post->id]) }}" class="read-more">Read more</a>
           </div>

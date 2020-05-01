@@ -19,11 +19,15 @@
                         <input type="text" class="form-control" name="title" value="{{ old('title', $blog_form->title) }}">
                     </div>
                     <div class="form-group row">
+                        <label class="col-md-2 lbl" for="desc">Description</label>
+                        <textarea class="form-control" name="desc" rows="5">{{ old('desc', $blog_form->desc) }}</textarea>
+                    </div>
+                    <div class="form-group row">
                         <label class="col-md-2 lbl" for="body">Content</label>
                         <textarea class="form-control" name="body" rows="20">{{ old('body', $blog_form->body) }}</textarea>
                     </div>
                     <div class="input-group">
-                        <label class="col-md-2 lbl" for="title">Image</label>
+                        <label class="img-lbl lbl" for="title">Image</label>
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" id="customFile" name="image">
                             <label class="custom-file-label" for="customFile" data-browse="Browse">{{ $blog_form->image_path }}</label>

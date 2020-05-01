@@ -155,8 +155,8 @@ body {
 }
 
 .article .row .article-image {
+  max-width: 80%;
   text-decoration: none;
-  width: 80%;
   display: block;
   margin: 15px auto 0 auto;
 }

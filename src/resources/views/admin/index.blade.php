@@ -30,7 +30,7 @@
                                         <th width="5%">ID</th>
                                         <th width="15%">Date</th>
                                         <th width="20%">Title</th>
-                                        <th width="50%">Content</th>
+                                        <th width="50%">Description</th>
                                         <th width="5%"></th>
                                         <th width="5%"></th>
                                     </tr>
@@ -41,7 +41,7 @@
                                             <th>{{ $blog->id }}</th>
                                             <td>{{ $blog->updated_at->format('M-d-Y') }}</td>
                                             <td><a href="{{ route('article', ['id' => $blog->id]) }}">{{ \Str::limit($blog->title, 20) }}</a></td>
-                                            <td>{{ \Str::limit($blog->body, 40) }}</td>
+                                            <td>{{ \Str::limit($blog->desc, 40) }}</td>
                                             <td><a href="{{ route('admin_edit', ['id' => $blog->id]) }}">Edit</a></td>
                                             <td><a href="{{ route('admin_delete', ['id' => $blog->id]) }}" class="btn-dell">Delete</a></td>
                                         </tr>

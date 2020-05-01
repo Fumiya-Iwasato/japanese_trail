@@ -10,6 +10,7 @@ class Blog extends Model
 
     public static $rules = [
         'title' => 'required',
+        'desc' => 'required',
         'body' => 'required|max:3000', 
     ];
 }
