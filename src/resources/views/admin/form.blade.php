@@ -26,6 +26,10 @@
                         <label class="col-md-2 lbl" for="body">Content</label>
                         <textarea class="form-control" name="body" rows="20">{{ old('body') }}</textarea>
                     </div>
+                    <div class="form-group row">
+                        <label class="col-md-2 lbl" for="video">Video</label>
+                        <textarea class="form-control" name="video" rows="3">{{ old('video') }}</textarea>
+                    </div>
                     <div class="input-group">
                         <label class="img-lbl lbl" for="title">Image</label>
                         <div class="custom-file">

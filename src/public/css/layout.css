@@ -155,7 +155,7 @@ body {
 }
 
 .article .row .article-image {
-  max-width: 80%;
+  max-width: 100%;
   text-decoration: none;
   display: block;
   margin: 15px auto 0 auto;
@@ -170,7 +170,32 @@ body {
   text-align: left;
 }
 
+.article .row .article-video {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.article .row .article-video iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.article .row .back-box {
+  margin-top: 50px;
+}
+
 .article .row .back-box .back {
+  font-size: 18px;
+  padding: 10px;
+  border: 1px solid;
+  opacity: 0.8;
+}
+
+.article .row .back-box .back-2 {
   font-size: 18px;
   padding: 10px;
   border: 1px solid;
