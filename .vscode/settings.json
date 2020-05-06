@@ -1,3 +1,4 @@
 {
-    "phpcs.standard": "${workspaceRoot}/setting/phpcs_laravel.xml"
+    "phpcs.standard": "${workspaceRoot}/setting/phpcs_laravel.xml",
+    "git.ignoreLimitWarning": true
 }
