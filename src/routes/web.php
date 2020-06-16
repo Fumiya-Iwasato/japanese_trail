@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
@@ -30,4 +30,3 @@ Route::get('contact', 'FrontBlogController@contact')->name('contact');
 Route::post('contact', 'FrontBlogController@send')->name('send');
 
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
